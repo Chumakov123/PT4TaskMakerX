@@ -1,0 +1,56 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: g++.exe build active file",
+			"command": "__compiler__",
+			"args": [
+				"-fdiagnostics-color=always",
+                "-Wall",
+				"-std=c++14",
+				"-m32",
+				"-fdata-sections",
+				"-ffunction-sections",
+				"-s",
+				"-Os",
+				"-shared",
+				"${fileDirname}\\pt4taskmakerX.cpp",
+				"${fileDirname}\\pt4taskmaker.cpp",
+				"${file}",
+				"-o",
+				"${fileDirname}\\PT4${fileBasenameNoExtension}.dll",
+				"${fileDirname}\\pt4taskmaker.def",
+				"-Wl,--enable-stdcall-fixup,--gc-sections"
+			],
+			"options": {
+				"cwd": "__compilerfolder__"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: \"g++.exe\""
+		},
+		{
+			"type": "cppbuild",
+			"label": "C/C++: g++.exe сборка активного файла",
+			"command": "__compiler__",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+			],
+			"options": {
+				"cwd": "__compilerfolder__"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "компилятор: \"__compiler__\""
+		}
+	]
+}

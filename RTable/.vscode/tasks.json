@@ -1,0 +1,57 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: g++.exe build active file",
+			"command": "C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/bin/g++.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+                "-Wall",
+				"-std=c++14",
+				"-m32",
+				"-fdata-sections",
+				"-ffunction-sections",
+				"-s",
+				"-Os",
+				"-shared",
+				"${fileDirname}\\pt4taskmakerX.cpp",
+				"${fileDirname}\\pt4taskmaker.cpp",
+				"${fileDirname}\\PTDB.cpp",
+				"${file}",
+				"-o",
+				"${fileDirname}\\PT4${fileBasenameNoExtension}.dll",
+				"${fileDirname}\\pt4taskmaker.def",
+				"-Wl,--enable-stdcall-fixup,--gc-sections"
+			],
+			"options": {
+				"cwd": "C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/bin"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: \"g++.exe\""
+		},
+		{
+			"type": "cppbuild",
+			"label": "C/C++: g++.exe сборка активного файла",
+			"command": "C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/bin/g++.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+			],
+			"options": {
+				"cwd": "C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/bin"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "компилятор: \"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/bin/g++.exe\""
+		}
+	]
+}
